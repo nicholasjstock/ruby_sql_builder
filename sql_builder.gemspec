@@ -4,8 +4,7 @@ require File.expand_path('../lib/sql_builder/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Nicholas Stock"]
   gem.email         = ["stockn@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = 'Follow SQL language paradim to create complex queries'
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -14,4 +13,6 @@ Gem::Specification.new do |gem|
   gem.name          = "sql_builder"
   gem.require_paths = ["lib"]
   gem.version       = SqlBuilder::VERSION
+  gem.add_development_dependency 'rspec'
+
 end

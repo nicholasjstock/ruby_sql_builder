@@ -1,6 +1,9 @@
 # SqlBuilder
 
-TODO: Write a gem description
+SQL DSL runs to_sql on each element when it is instanciated. This means that you cannot pass a complex query around to multiple objects to let each object update it as it may because as soon as sql dsl instanciates a part of the statements it is converted into a string.
+
+This is just code thats been sitting on my laptop for years, there is alot more work to do to make it a real realease.
+_
 
 ## Installation
 

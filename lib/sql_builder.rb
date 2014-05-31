@@ -1,5 +1,13 @@
 require "sql_builder/version"
+require "sql_builder/symbol"
+require "sql_builder/string"
+require "sql_builder/and_condition"
+require "sql_builder/condition"
+require "sql_builder/expression"
+require "sql_builder/function"
+require "sql_builder/inner_join_expression"
+require "sql_builder/insert"
+require "sql_builder/select"
+require "sql_builder/table_expression"
+require "sql_builder/update"
 
-module SqlBuilder
-  # Your code goes here...
-end
