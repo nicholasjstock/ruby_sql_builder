@@ -106,6 +106,15 @@ describe 'select' do
     select = SqlBuilder::Select.new(:select_expressions => [ :a ], :tables => [])
     expect{ select.to_sql }.to raise_error(ArgumentError)
   end
+  xit 'full functional test' do
+    condition_one = SqlBuilder::Condition.is_null(:v)
+    cocndition_two = SqlBuilder::Condition.new(:lhs => :a, :op => "=", :rhs => "'your mother'")
+    or_seperated = SqlBuilder::Expression.new(:conditions => [condition_one,  cocndition_two]);
+    select = SqlBuilder::Select.new(:select_expressions => [ :a ], :tables => [ :a, :b ], :expression => or_seperated)
+    puts select.to_sql
+  end
 
+  
+  
 end
 

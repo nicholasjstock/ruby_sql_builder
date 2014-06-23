@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["stockn@gmail.com"]
   gem.description   = 'Follow SQL language paradim to create complex queries'
   gem.homepage      = ""
-
+  gem.summary       = ""
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
@@ -14,5 +14,4 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = SqlBuilder::VERSION
   gem.add_development_dependency 'rspec'
-
 end
