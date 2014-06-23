@@ -13,5 +13,5 @@ require "sql_builder/and_condition_builder"
 require "sql_builder/expression_builder"
 require "sql_builder/table_expression"
 require "sql_builder/nested_conditional_builder"
-
 require "sql_builder/update"
+require "byebug"

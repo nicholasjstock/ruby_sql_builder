@@ -5,17 +5,22 @@ module SqlBuilder
       instance_eval(&block)
     end
     def where (&block)
-      @sqlparts[]= AndConditionBuilder.new(&block)
+      @sqlparts.push AndConditionBuilder.new(&block)
       self
      end
 
      def or_where (&block)
-       @sqlparts[]= ExpressionBuilder.new(&block)
+       @sqlparts.push ExpressionBuilder.new(&block)
+      
        self
      end
    
      def to_sql
-       AndCondition.new(:conditions => @sqlparts).to_sql
+       if (@sqlparts.length > 1)
+         AndCondition.new(:conditions => @sqlparts).to_sql
+       else
+         @sqlparts[0].to_sql
+       end
      end
      
   end
