@@ -1,5 +1,5 @@
 module SqlBuilder
-  class Expression
+  class Expression 
     attr_accessor :conditions
 
     def initialize(hash = {})

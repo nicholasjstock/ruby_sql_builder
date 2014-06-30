@@ -1,5 +1,5 @@
 module SqlBuilder
-  class AndCondition
+  class AndCondition 
     attr_accessor :conditions
 
     def initialize(hash = {})

@@ -16,12 +16,7 @@ module SqlBuilder
      end
      
      def where (&block)
-       @select_expression.expression = AndConditionBuilder.new(&block)
-       self
-     end
-
-     def or_where (&block)
-       @select_expression.expression = ExpressionBuilder.new(&block)
+       @select_expression.expression = ConditionBuilder.new(&block)
        self
      end
      
